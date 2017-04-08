@@ -8,7 +8,8 @@ import (
 
 func ListMovies(w http.ResponseWriter, r *http.Request, store *movie.MovieStore) {
 	movies := store.Movies()
-	bytes, err := movies.JSON()
+
+	bytes, err := json.MarshalIndent(movies, "", "  ")
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		return
@@ -27,7 +28,7 @@ func AddMovie(w http.ResponseWriter, r *http.Request, store *movie.MovieStore) {
 
 	store.Insert(movie)
 
-	bytes, err := movie.JSON()
+	bytes, err := json.MarshalIndent(movie, "", "  ")
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		return

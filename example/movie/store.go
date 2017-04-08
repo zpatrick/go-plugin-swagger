@@ -1,16 +1,16 @@
 package movie
 
 type MovieStore struct {
-	movies Movies
+	movies []Movie
 }
 
 func NewMovieStore() *MovieStore {
 	return &MovieStore{
-		movies: Movies{},
+		movies: []Movie{},
 	}
 }
 
-func (m *MovieStore) Movies() Movies {
+func (m *MovieStore) Movies() []Movie {
 	return m.movies
 }
 
