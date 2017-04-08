@@ -1,7 +1,7 @@
 package swagger
 
 type Contact struct {
-	Name  string `json:"name"`
-	URL   string `json:"url"`
-	Email string `json:"email"`
+	Name  string `json:"name,omitempty"`
+	URL   string `json:"url,omitempty"`
+	Email string `json:"email,omitempty"`
 }

@@ -1,9 +1,9 @@
 package swagger
 
 type Info struct {
-	Title          string  `json:"title"`
-	Version        string  `json:"version"`
-	TermsOfService string  `json:"termsOfService"`
-	Contact        Contact `json:"contact"`
-	License        License `json:"license"`
+	Title          string   `json:"title,omitempty"`
+	Version        string   `json:"version,omitempty"`
+	TermsOfService string   `json:"termsOfService,omitempty"`
+	Contact        *Contact `json:"contact,omitempty"`
+	License        *License `json:"license,omitempty"`
 }

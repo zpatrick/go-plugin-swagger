@@ -1,8 +1,9 @@
 package swagger
 
 type Method struct {
-	Summary     string              `json:"summary"`
-	Description string              `json:"description"`
-	Parameters  []Parameter         `json:"parameters"`
-	Responses   map[string]Response `json:"responses"`
+	Summary     string              `json:"summary,omitempty"`
+	Description string              `json:"description,omitempty"`
+	Parameters  []Parameter         `json:"parameters,omitempty"`
+	Responses   map[string]Response `json:"responses,omitempty"`
+	Tags        []string            `json:"tags,omitempty"`
 }
