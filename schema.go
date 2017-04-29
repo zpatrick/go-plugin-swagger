@@ -30,3 +30,18 @@ func NewObjectSliceSchema(name string) *Schema {
 		},
 	}
 }
+
+func NewIntSchema() *Schema {
+	return &Schema{
+		Type: "integer",
+	}
+}
+
+func NewIntSliceSchema() *Schema {
+	return &Schema{
+		Type: "array",
+		Items: map[string]string{
+			"type": "integer",
+		},
+	}
+}
