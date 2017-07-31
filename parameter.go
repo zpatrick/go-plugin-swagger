@@ -53,9 +53,11 @@ func NewBodySliceParam(name, description string, required bool) Parameter {
 		Description: description,
 		Required:    required,
 		In:          "body",
-		Schema: map[string]string{
+		Schema: map[string]interface{}{
 			"type": "array",
-			"$ref": fmt.Sprintf("#/definitions/%s", name),
+			"items": map[string]interface{}{
+				"$ref": fmt.Sprintf("#/definitions/%s", name),
+			},
 		},
 	}
 }
