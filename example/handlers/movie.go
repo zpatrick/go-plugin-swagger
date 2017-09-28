@@ -2,8 +2,9 @@ package handlers
 
 import (
 	"encoding/json"
-	"github.com/zpatrick/go-plugin-swagger/example/movie"
 	"net/http"
+
+	"github.com/zpatrick/go-plugin-swagger/example/movie"
 )
 
 func ListMovies(w http.ResponseWriter, r *http.Request, store *movie.MovieStore) {

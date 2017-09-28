@@ -2,10 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/zpatrick/go-plugin-swagger/example/handlers"
-	"github.com/zpatrick/go-plugin-swagger/example/movie"
 	"log"
 	"net/http"
+
+	"github.com/zpatrick/go-plugin-swagger/example/handlers"
+	"github.com/zpatrick/go-plugin-swagger/example/movie"
 )
 
 const (
